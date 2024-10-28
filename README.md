@@ -1,52 +1,122 @@
-# Assignment: Working with Managed No-SQL Databases
+# HHA504: Managed No-SQL Databases in Atlas MongoDB, Redis, and GCP BigQuery
 
-## Objective
+## Table of Contents
 
-The objective of this assignment is to introduce you to managed database services in Azure and Google Cloud Platform (GCP). You will learn how to start, stop, and monitor database-related services, including BigQuery and MySQL.
+-   Introduction
+-   MongoDB Atlas Setup
+    -   Configuration
+    -   Connection Details
+    -   Monitoring
+-   Data Uploads to MongoDB
+-   Redis Setup
+    -   Configuration
+    -   Connection Details
+    -   Data Uploads to Redis
+-   GCP BigQuery Exploration
+    -   Dataset Creation
+    -   Query Execution
+    -   Cost Monitoring
+-   Conclusion
 
-## Dataset
+## Introduction
 
-The dataset used for this assignment is a healthcare dataset with the following columns:
+This document outlines my experience with managed No-SQL database services using MongoDB Atlas, Redis, and Google Cloud Platform (GCP) BigQuery. I set up and monitored these databases and conducted data analysis using BigQuery.
 
-| PatientID | Name           | Age | Gender | DiagnosisCode | VisitDate  | Hospital                | TreatmentPlan          | FollowUpDate |
-|-----------|----------------|-----|--------|---------------|------------|-------------------------|------------------------|---------------|
-| 1         | John Doe      | 45  | M      | M54.5         | 2024-09-10 | Stony Brook Hospital     | Physical Therapy        | 2024-09-20    |
-| 2         | Jane Smith    | 29  | F      | E11.9         | 2024-08-15 | Stony Brook Hospital     | Insulin                | 2024-09-15    |
-| 3         | Bob Johnson    | 65  | M      | I10           | 2024-10-01 | Long Island Clinic       | Hypertension Medication | 2024-11-01    |
-| 4         | Alice Williams  | 50  | F      | J45.909       | 2024-07-22 | Southampton Hospital     | Bronchodilators        | 2024-08-22    |
-| 5         | Michael Brown   | 37  | M      | G43.909       | 2024-06-12 | Stony Brook Hospital     | Triptans               |               |
-| 6         | Susan Davis    | 54  | F      | I25.10        | 2024-05-10 | Stony Brook Hospital     | Statins                | 2024-06-10    |
+## MongoDB Atlas Setup
 
-## 1. Google BigQuery (GCP)
+### Configuration
 
-### Steps to Upload Data
-1. Navigate to BigQuery in the Google Cloud Console.
-2. Create a new dataset.
-3. Upload the healthcare dataset (CSV) into a table within your dataset.
-4. Run the SQL query: 
+I created a cluster in **MongoDB Atlas** with the following configuration:
 
-![GCP-1](images/gcp-2.png)
+-   **Cluster Name**: hha-non-sql-cluster
+-   **Cloud Provider**: AWS
+-   **Region**: US East
 
-![Query Result](images/gcp-1.png)
+### Connection Details
 
-## 2. MongoDB Atlas
+-   **Connection String**:
+    
+    bash
+    
+    Copy code
+    
+    `mongodb+srv://admin_super:your_password@hha-non-sql-cluster.mongodb.net/test` 
+    
+-   **Database Name**: healthcare_db
+-   **Collection Name**: patients
 
-### Steps to Insert Data
+  
+_Connection details for MongoDB Atlas._
 
-1.  Go to MongoDB Atlas and create a new database instance.
-2.  Insert the healthcare dataset into a collection using the following Python script:
+### Monitoring
 
-![atlas-1](images/atlas-2.png)
+In MongoDB Atlas, I monitored performance metrics such as CPU usage, memory consumption, and connection count.
 
-![atlas-db](images/atlas-1.png)
+![MongoDB Atlas Monitoring](images/atlas-2.png)  
+_Monitoring metrics in MongoDB Atlas._
 
-## 3. Redis Cloud
+## Data Uploads to MongoDB
 
-### Steps to Insert Data
+Data uploads to MongoDB were performed using the `pymongo` library in Python:
 
-1.  Sign up for a free tier account on Redis Cloud.
-2.  Insert patient data using the following Python script:
+![MongoDB Atlas Monitoring](images/atlas-2.png)  
 
-![redis-1](images/atlas-2.png)
+I prepared a CSV file with patient data to be uploaded into the MongoDB collection.
 
-![redis-upload](images/atlas-1.png)
+## Redis Setup
+
+### Configuration
+
+I set up **Redis** to manage in-memory data:
+
+-   **Database Name**: healthcare_redis
+
+### Connection Details
+
+-   **Host**: your_redis_host
+-   **Port**: your_redis_port
+-   **Password**: your_redis_password
+
+  
+_Connection details for Redis._
+
+### Data Uploads to Redis
+
+Data uploads to Redis were executed with the following Python script:
+
+
+![redis python](images/redis-2.png)  
+
+
+This script allowed me to upload patient records into Redis efficiently.
+
+## GCP BigQuery Exploration
+
+### Dataset Creation
+
+Moving on to **GCP**, I explored BigQuery by creating a dataset named `healthcare_dataset` and loading a CSV file into a table called `patients_table`.
+
+  
+_Creating the dataset and loading data in BigQuery._
+
+### Query Execution
+
+I executed a sample query to retrieve patient information:
+
+
+![GCP Monitoring](images/gcp-2.png)  
+
+
+  
+_Query results from BigQuery._
+
+![GCP Results](images/gcp-	.png)  
+
+
+### Cost Monitoring
+
+I tracked costs using the Billing Dashboard, noting that 3.2MB of data was processed under the free tier of 10MB.
+
+## Conclusion
+
+In conclusion, MongoDB Atlas, Redis, and GCP BigQuery provide powerful tools for managing No-SQL databases and conducting data analysis. Each platform offers unique features that cater to different needs, making them suitable for various data management tasks. MongoDB Atlas excels in ease of setup and monitoring, Redis is great for fast, in-memory data management, and GCP BigQuery shines in data analysis capabilities. The choice between these platforms largely depends on specific project requirements and user preferences.
