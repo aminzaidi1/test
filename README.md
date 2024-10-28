@@ -53,7 +53,6 @@ _Connection details for MongoDB Atlas._
 In MongoDB Atlas, I monitored the data uploaded using python.
 
 ![MongoDB Atlas Monitoring](images/atlas-1.png)  
-_Monitoring metrics in MongoDB Atlas._
 
 ## Data Uploads to MongoDB
 
@@ -85,7 +84,7 @@ _Connection details for Redis._
 Data uploads to Redis were executed with the following Python script:
 
 
-![redis python](images/redis-2.png)  
+![redis python](images/redis-1.png)  
 
 
 This script allowed me to upload patient records into Redis efficiently.
@@ -111,8 +110,8 @@ I executed a sample query to retrieve patient information:
 
 ### Cost Monitoring
 
-I tracked costs using the Billing Dashboard, noting that 3.2MB of data was processed under the free tier of 10MB.
+Billing Dashboard allowed me to tracks costs which yielded that 3.2MB data of the 10MB free tier plan was processed.
 
 ## Conclusion
 
-In conclusion, MongoDB Atlas, Redis, and GCP BigQuery provide powerful tools for managing No-SQL databases and conducting data analysis. Each platform offers unique features that cater to different needs, making them suitable for various data management tasks. MongoDB Atlas excels in ease of setup and monitoring, Redis is great for fast, in-memory data management, and GCP BigQuery shines in data analysis capabilities. The choice between these platforms largely depends on specific project requirements and user preferences.
+To conculde, Redis, GCP BigQuery, and MongoDB Atlas all provide powerful No-SQL databases managing tools with extensive capabalities for data analysis. Unique features are offered by each of the platforms which solves different needs making them acceptable for various data managemnet taska. MongoDB Atlas excels in ease of setup and monitoring, whereas, Redis is good for in-memory fast data management, and BigQuery shines in analysis capabalities of data. The choice between which platform to use ultimately depends on user preferneces and task management.
