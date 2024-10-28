@@ -25,9 +25,9 @@ The dataset used for this assignment is a healthcare dataset with the following 
 3. Upload the healthcare dataset (CSV) into a table within your dataset.
 4. Run the SQL query: 
 
-![GCP-1](images/gcp-1.png)
+![GCP-1](images/gcp-2.png)
 
-![Query Result](images/gcp-2.png)
+![Query Result](images/gcp-1.png)
 
 ## 2. MongoDB Atlas
 
