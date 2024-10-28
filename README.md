@@ -50,7 +50,7 @@ _Connection details for MongoDB Atlas._
 
 ### Monitoring
 
-In MongoDB Atlas, I monitored performance metrics such as CPU usage, memory consumption, and connection count.
+In MongoDB Atlas, I monitored the data uploaded using python.
 
 ![MongoDB Atlas Monitoring](images/atlas-1.png)  
 _Monitoring metrics in MongoDB Atlas._
@@ -106,11 +106,7 @@ I executed a sample query to retrieve patient information:
 
 ![GCP Monitoring](images/gcp-2.png)  
 
-
-  
-_Query results from BigQuery._
-
-![GCP Results](images/gcp-	.png)  
+![GCP Results](images/gcp-1.png)  
 
 
 ### Cost Monitoring
