@@ -25,9 +25,9 @@ The dataset used for this assignment is a healthcare dataset with the following 
 3. Upload the healthcare dataset (CSV) into a table within your dataset.
 4. Run the SQL query: 
 
-![GCP-1](images\gcp-1.png)
+![GCP-1](images/gcp-1.png)
 
-![Query Result](images\gcp-2.png)
+![Query Result](images/gcp-2.png)
 
 ## 2. MongoDB Atlas
 
@@ -36,9 +36,9 @@ The dataset used for this assignment is a healthcare dataset with the following 
 1.  Go to MongoDB Atlas and create a new database instance.
 2.  Insert the healthcare dataset into a collection using the following Python script:
 
-![atlas-1](images\atlas-1.png)
+![atlas-1](images/atlas-1.png)
 
-![atlas-db](images\atlas-2.png)
+![atlas-db](images/atlas-2.png)
 
 ## 3. Redis Cloud
 
@@ -47,6 +47,6 @@ The dataset used for this assignment is a healthcare dataset with the following 
 1.  Sign up for a free tier account on Redis Cloud.
 2.  Insert patient data using the following Python script:
 
-![redis-1](images\atlas-1.png)
+![redis-1](images/atlas-1.png)
 
-![redis-upload](images\atlas-2.png)
+![redis-upload](images/atlas-2.png)
