@@ -52,7 +52,7 @@ _Connection details for MongoDB Atlas._
 
 In MongoDB Atlas, I monitored performance metrics such as CPU usage, memory consumption, and connection count.
 
-![MongoDB Atlas Monitoring](images/atlas-2.png)  
+![MongoDB Atlas Monitoring](images/atlas-1.png)  
 _Monitoring metrics in MongoDB Atlas._
 
 ## Data Uploads to MongoDB
